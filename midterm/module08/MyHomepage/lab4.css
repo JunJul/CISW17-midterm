@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+    margin-left: 15em;
+    text-align: left;
+}
+
+hr{
+    border-top: 10px dotted orange;
+    border-bottom: none;
+    width: 35%;
+} 
+
+/* Title */
+div.MyTitle{
+    margin: 0 auto 250px auto;
+    width: 35%;
+    text-align: left;
+}
+
+img.Pokemon{
+    width: 35%;
+    border-radius: 50%;
+    border: 1px solid blue;
+    float: left;
+}
+
+/* School Links */
+div.SchoolLinks{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Important Class Links */
+div.ImportantClasslinks{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* TechNews */
+div.TechNews{
+    width: 50%;
+    margin: 0 auto;
+}
+

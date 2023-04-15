@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 Notes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            min-width: 800px;
+        }
+        p.answer {
+            padding-left: 1em;
+        }
+
+        p.content-topic {
+            font-weight: bold;
+        }
+
+        p.concept {
+            font-weight: bold;
+            font-family: 'Montserrat-Black', sans-serif;
+        }
+
+        ul {
+            padding-left: 3em;
+        }
+
+        /* main section */
+        section.mainSection {
+            background-color: #E8A87C;
+            margin: 10px 200px;
+        }
+
+        section.title {
+            text-align: center;
+        }
+
+        header.chapter-header {
+            /* text-align: center; */
+            color: blue;
+        }
+    </style>
+
+    <!--
+                    Junze He
+                    Spring 2023 CISW 17 
+                    04/01/2023
+        -->
+</head>
+
+<body>
+    <section class="title">
+        <header>
+            <h1>Lesson 6 Note</h1>
+        </header>
+    </section>
+
+    <section class="mainSection">
+
+        <div class="container">
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 12 Creating Layouts Using Modern CSS Techniques</h3>
+                </header>
+
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+
+                <ul>
+                    <li>
+                        <p class="concept">How fixed layouts work</p>
+                        <ul>
+                           <li>
+                                <p class="answer">
+                                    A fix layout means <strong>body</strong> of the page is set to a specific width other than percentage. 
+                                    That width is typically controlled by a master “wrapper” element that contains all the content.
+                                </p>
+                           </li>
+                           <li>
+                                <p class="answer">
+                                    The CSS property width is an exmaple if I set a div element with a width.
+                                </p>
+                           </li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <p class="concept">How liquid layouts work</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    A liquid layout—also called a fluid layout—is a layout in which the body of the page does not use 
+                                    a specified width in pixels, although it might be enclosed in a master wrapper element that uses a percentage width. 
+                                    The idea behind a liquid layout is that it can be perfectly usable and still retain the overall design aesthetic, 
+                                    even if the user has a very small or very wide screen.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to create a fixed/liquid hybrid layout</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    A fixed/liquid hybrid layout contains elements of both types of layouts. For example, you could have a fluid layout that
+                                    includes fixed-width content areas either within the body area or as anchor elements (such as a left-side column or as a
+                                    top navigation strip). You can even create a fixed content area that acts like a frame, in which a content area remains
+                                    fixed even as users scroll through the content.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to create CSS flexible box layouts</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    The CSS Flexible Box module gives you a way to position elements that display on a line in a container
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The container can alter the dimensions of the elements inside it to best fit the available free space.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    A flexible box container, or flex container, will expand items to fill available free space or shrink them to
+                                    prevent
+                                    overflow in smaller spaces.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    This is also called normal flow which means normal layout in web pages is based on block
+                                    and inline elements interacting with one another
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    Inside a container, I need to set display property to be to be flex.
+                                    Then, I add <strong>flex-direction</strong> property to set the flow and here are the properties: 
+                                    row, row-reverse, column, and column-reverse.
+                                </p>
+                                <p class="answer">
+                                    Once I have the flow direction, I need to consider how the items will wrap when they come to a boundary. 
+                                    I can use <strong>flex-wrap</strong> property.
+                                </p>
+                                <p class="answer">
+                                    After we set direction and wrap, I need to set space between each item. 
+                                    I should use the <strong>justify-content</strong> property.
+                                </p>
+                                <p class="answer">
+                                    Finally, If I want to align and position my items vertically inside a contianer, 
+                                    I should use the <strong>align-item property</strong>.
+                                    Moreover, if I want multiple lines in my container, I should use <strong>align-content</strong>.
+                                </p>
+                                <p class="answer">
+                                    If I want to arrange the order of item, I should use the <strong>order</strong> property.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <p class="concept">How to use CSS grid layouts</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I need to define a container to be grid by the property <strong>display</strong>.
+                                    Then, I should define the rows and cols with the 
+                                    <strong>grid-template-rows and grid-template-columns</strong> property.
+                                    Finally, I can place the child elements into the grid with <strong>grid-template-areas and the grid-area</strong> property.
+                                </p>
+                                <p class="">
+                                    fr: This refers to the free space inside the container.
+                                    grid-template-columns: 15% 3fr 1fr; 
+                                    Have a three-column layout with a 15% left column and the remaining columns taking up three-quarters 
+                                    and one-quarter of the remaining available space.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">Other concepts</p>
+                        <ul>
+                            <li>
+                                <p class="answer">min-width: sets the minimum width of an element, not including padding, borders, or margins.</p>
+                                <p class="answer">max-width: ensure that elements of the page with percentage widths don’t get too wide. This property lets the element expand up to
+                                    a point and then stop.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I have learned fixed and liquid layout, and grid, flex system to organize elements on a web.
+                    The fix elements are set with a default width in pixels, so when users scroll my webpage, the fix elements stay at the same position.
+                    The liquid elements are set with a flexible width in percentage, so the width is relative to container of the liquid elements. 
+                    When the size of the container is changed, the width in percentage unit can always fit the size of the container by the percentage value.
+                    If I combine fixed and liquid layout together, it means some of the elements are flexible and some  of the elements are not.
+                </p>
+
+                <p>
+                    The flex system is to create a flexible container that can contain elements and is responsive.
+                    When users minimize their screens, the container can resize and rearrange items in rows or cols inside the container.
+                    If I want to use a table for layout, I should consider a grid system.
+                    The grid system is the best practice for table layout because it can specify the size of the row and col, and define a
+                    gap between each cell.
+                    The grid system can design a layout for two dimensions such as a row and col, but the flex system only design for one D
+                    such as a row or col.
+                </p>
+            </div>
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 13 Taking Control of Backgrounds and Borders</h3>
+                </header>
+            
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>
+                        <p class="concept">How to layer backgrounds</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the <strong>background properties</strong> to help me create multiple backgrounds. 
+                                    I should use <strong>backrgoud: url('')</strong> to insert my backgrounds in a container. 
+                                    Then, I need to use <strong>background-clip</strong> property to decide which part of the background 
+                                    should be hidden or covered by the background of the container.
+                                    Finally, I need to set their <strong>background-size and background-repeat</strong>. 
+                                </p>
+                            </li>
+                        </ul>
+            
+                    </li>
+            
+                    <li>
+                        <p class="concept">How to use gradients as backgrounds</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can define my backgrounds with the combination of background-image and background-color.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The property linear-gradient: with a comma-separated list of colors inside the parentheses.
+                                    background-image: linear-gradient( #ff00d5, rgba(39, 164, 0, 0.5), blue );
+                                    I can also add color stops and color direction to stop and move my gradients.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The property radial-gradient: starts a color at a point.
+                                    I can define the shape beofre setting the color. 
+                                    While defining the shape, I can give it more precious by adding position keywords such as 
+                                    background-image: radial-gradient(at bottom left, orange, white);
+                                </p>    
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    linear gradients fade down a line, radial gradients start at a single point and emanate outward.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to use CSS properties to create “zebra-stripe” tables automatically</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    To create aebra-strip tables, I can use the nth-child(odd/even) property to set odd or even child to be a different color.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to create rounded corners on elements</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the border-radius property
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to use images as borders</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can the border-image-source property to define my source of the image. 
+                                    Then, I need to use border-image-slice property to crop my four edges.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How outlines are different from borders</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    Outlines do not take up space. Outlines may be non-rectangular.
+                                    Browsers and other user agents often render outlines on elements when they are in the :focus state.
+                                    Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is
+                                    NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the
+                                    outline. 
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned how to format my backgrounds and add multiple backgrounds on a webpage.
+                    By adding, a background on a webpage, I use the shortcut background: url('').
+                    After this statement, I specify the position of the background image and size of the image and repetition
+                    such as background: url('') top right / 45% repeat.
+                    When I use a gradient as background, I should use linear-gradient and radial-gradient.
+                    I can also define color stops after each color to decide where should the color stop at.
+                </p>
+            
+                <p>
+                    To set a background color for an element, the best practice would be nth-child()
+                    because I can have better control over what color of a specific element to be.
+                    I can round the corner of an element by using the border-radius property
+                    and I can also set an image as a border by using border-image properties.
+                    Outline and border do not take any space initially;
+                    however, an outline may be not a rectangular type and a border has to be a rectangle.
+                </p>
+            </div>
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 14 Using CSS Transformations and Transitions</h3>
+                </header>
+            
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>
+                        <p class="concept">How to transform elements by rotating, scaling, moving, and tilting</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    The trasnform: rotate() function means to rotate the element in degree.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The trasnform: scale() function means to change the size of the element, 
+                                    but it can also change the size of the element in x and y axis.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The transform: translate() function of the transform property moves an element from its default position on the page to the defined
+                                    amount horizontally or vertically.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="answer">
+                                    The transform: skew() means on an element to slant elements on the horizontal and vertical axes.
+                                </p>
+                            </li>
+
+                        </ul>
+            
+                    </li>
+            
+                    <li>
+                        <p class="concept">How to work with transformations in three dimensions</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    rotatex(), rotatey(), and rotate3d(x, y, z, angle): Allows you to define a point in 3D space around which to rotate the
+                                    element.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    scale3d(x, y, z) and scalez()—Resizes the element in three dimensions.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    translate3d(x, y, z) and translatez()—Moves the element in three dimensions.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The best way to do this is to set the perspective property on the parent element. The value of this property determines
+                                    the intensity of the effect; for example, further away makes the effect less intense than up close.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to apply multiple transformations to one element</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    Here is the shortcut for trasnform porperty to define all types of the transformation. 
+                                    For example, transform: rotate(30deg) scale(1.2) translate(15px,0) skew(5deg);
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to do simple animations with the transition property</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I need to use transition property with transform property to create simple animations.
+                                    transition: property duration timing-function delay;
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    property(which property is set to have transition)
+                                    duration(how long does the transition take)
+                                    timing-function(speed of the transition)
+                                    delay(when does the transition starts)
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned basic animations in CSS with two main properties. They are the transform and the transition
+                    property.
+                    If I want to create some simple animations, I need to use the transition and the transform property.
+                    The transform property can help me to rotate, translate/position, skew/slant, and scale an element.
+                    Moreover, I can transform an element into 3D. Simply, I just need to define one more dimension when I define the
+                    transform type.
+                    For example, rotate3d(x,y,z,angle). Also, there is a shortcut that I can define all types of transformation such as
+                    transform: rotate(), translate();
+                </p>
+            
+                <p>
+                    However, the transform property is static and cannot interact with users, so I need to use transition.
+                    The transition property helps the transform to move fast or slow while providing dynamic transformation with users
+                    When I define transition property, I need to define transform property by using pseudo-classes.
+                    Then, I set transition: property duration timing-function delay;
+                </p>
+            </div>
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 15 Animating with CSS and the Canvas</h3>
+                </header>
+            
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>
+                        <p class="concept">How to generate a CSS animation</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I need to use the CSS animation property to generate a CSS animation and the CSS anmination has eight properties.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    The CSS animation consists of two things: the styles that are animated and the keyframes that indicate the beginning and end
+                                    states for each animation style.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+            
+                    <li>
+                        <p class="concept">How CSS animations are different from transitions and how they are similar</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    The CSS animations can allow developers have more controls than the transitions property. 
+                                    The CSS can define keyframe which mean it can generate animations for a specifc element that I want.
+                                    It also can control the repetition and process of the animations on an element.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">Creating keyframes to hold and control animations</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the keyframes to hold animation by using animation-play-state, control direction by animation-direction, 
+                                    and use keywards like left and right to control the positions.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">Using the HTML5 &ltcanvas&gt element for self-contained animations</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the HTML canvas tag to create animations with the transform property.
+                                    First of all, I need to define my canvas, context, and images. 
+                                    Then, I declare width, height, frames, and currentFrame of the image.
+                                    After that, I add a function to draw my image and add transform to my element. 
+                                    Finally, I use setInterval() function to repeat my animation.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned more concepts about animation with transform property.
+                    I can use the animation properties to create animation and have more control over the transform properties.
+                    By using the animation properties, I can set the direction, iteration, play state, and fill mode of a dynamic element.
+                    More importantly, it can help me specify a specific element to generate animation by using the keyframe.
+                    The shortcut of the animation property is similar to the transform property, but the good thing is it doesn't require a
+                    correct order.
+                </p>
+            
+                <p>
+                    As I dig the hole deeper, I discover the canvas tag is a powerful tool to add animation to an image.
+                    If I want to use canvas tags to create animation,
+                    I have to use JavaScript for it because I need to declare canvas
+                    and context as variables in the script section to define canvas id and what type of animation it is such as 2d or 3d.
+                    After that, I create a function to draw the image by a function and I return the function to a variable.
+                    To repeat the animation, I put that variable into the setInterval() function to repeat the animation.
+                </p>
+            </div>
+
+            <p class="content-topic">Define CSS flexbox</p>
+            <p>
+                The CSS Flexible Box position elements that can be displayed on a line in a container. The container
+                can set the dimensions of the elements inside itself to best fit the available free space. 
+                A flexible box container can expand items to fill available free space or shrink them to prevent overflow in smaller spaces.
+            </p>
+
+            <p class="content-topic">Define CSS grid</p>
+            <p>
+                The CSS grid box can psoition elements like a table but a grid box can offer more fexibilities than a table 
+                because it acts like a flexible box that can adjust the spaces between each cell. Better still, the gird can set multiple rows and cols, 
+                but the flexible box can only set one dimension either a row or a col.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <footer>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- <script scr="script.js" defer></script> -->
+</body>
+
+</html>

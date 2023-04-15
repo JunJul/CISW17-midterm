@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson5-notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        p.answer {
+            padding-left: 1em;
+            color: black;
+        }
+
+        p.content-topic {
+            font-weight: bold;
+            font-family: 'Montserrat-Black', sans-serif;
+        }
+
+        p.concept{
+            font-weight: bold;
+            font-family: 'Montserrat-Black', sans-serif;
+        }
+
+        ul {
+            padding-left: 3em;
+        }
+
+        /* main section */
+        section.mainSection {
+            background-color: #E8A87C;
+            margin: 10px 200px;
+        }
+
+        section.title {
+            text-align: center;
+        }
+
+        header.chapter-header {
+            /* text-align: center; */
+            color: blue;
+            font-family: 'Ubuntu', sans-serif;
+            
+        }
+    </style>
+
+    <!--
+                    Junze He
+                    Spring 2023 CISW 17 
+                    03/26/2023
+        -->
+</head>
+
+<body>
+    <section class="title">
+        <header>
+            <h1>lesson5-notes</h1>
+        </header>
+    </section>
+
+    <section class="mainSection">
+        <div class="container">
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 9 Working with Margins, Padding, Alignment, and Floating</h3>
+                </header>
+
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+
+                <ul>
+                    <li>
+                        <p class="concept">How to add margins around elements</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    Adding margins is to add extra spaces outside of an element. 
+                                    I can use the CSS margin property which includes margin-top, margin-right,
+                                    margin-bottom, and margin-left.
+                                </p>
+
+                                <p class="answer">There are some shortcuts for margin property.</p>
+                                <ul>
+                                    <li>
+                                        <p class="answer">One value: The size of all the margins</p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">Two value: The size of the top/bottom margins and the left/right margins (in that order)</p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">The size of the top margin, the left and right margins (they are given the same value), and
+                                            the bottom margin (in that
+                                            order)</p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">Four value: The size of the top, right, bottom, and left margins (in that order)</p>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <p class="answer">
+                                    I should always set the margin of the body to be 0px because this is better for the placements of other elements.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to add padding within elements</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    Adding padding is to add extra spaces within an element.
+                                    I can use the CSS padding property which includes padding-top, padding-right, padding-bottom, and padding-left.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to keep everything aligned</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I should use the CSS property text-align and vertical-align to align my web content.
+                                    Both text-align and vertical-align are similar, but vertical-align is to align content vertically.
+                                </p>
+                                <p class="answer">
+                                    Here are some values of the vertical-align
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                top: Aligns the top of an element with the current line
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                middle: Aligns the middle of an element with the middle of its parent
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                Bottom: Aligns the bottom of an element with the current line
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                text-top: Aligns the top of an element with the top of its parent
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                baseline(default): Aligns the baseline of an element with the baseline of its parent
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                text-bottom: Aligns the bottom of an element with the bottom of its parent
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="answer">If I want to center a box element, I should set its margin left and right to be 0.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to use the float property</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the CSS float property to float my content to the left or right of a div element.
+                                    Float property allows elements to be moved around in the design so that other elements can wrap around them.
+                                </p> 
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    If I want to clear float elements near by another element.
+                                    I should use the CSS clear property to clear float elements at the left or the right or even both sides.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned the box model which every element have on a web page. Every element is wrapped in three
+                    layers.
+                    The first layer is the margin which is the extra space of an element.
+                    The second layer is a border, and the third layer is padding which is the extra space within an element.
+                    I can set margin and padding by the CSS property with values such as margin-top, padding-top, margin-left, and
+                    padding-left.
+                    Both properties have shortcuts that define their margin and padding. For example, one value defines all sides. Two
+                    values define top, bottom, and left, right.
+                </p>
+
+                <p>
+                    If I want to align my content, I could use text-align and vertical-align. 
+                    The difference between them is that text-align aligns content horizontally and vertical-align aligns content vertically.
+                    The best practice to center content is to set the left and right margins to zero instead of using a center tag.
+                    The CSS float property allows an element could be wrapped by other elements.
+                </p>
+            </div>
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 10 Understanding the CSS Box Model and Positioning</h3>
+                </header>
+            
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>
+                        <p class="concept">How to conceptualize the CSS box model</p>
+                        <ul>
+                            <li>
+                                <p class="answer">Every block element has margin, border, and padding aorund them.</p>
+                                <ul>
+                                    <li>
+                                        <p class="answer">
+                                            margin: is the area outside the element. It never has color; it is always transparent
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">
+                                            border: extends around the element, on the outer edge of any padding.
+                                            The border can be of several types, widths, and colors.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">
+                                            padding: exists around the content and inherits the background color of the content area.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="answer">
+                                            content: is surrounded by padding.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                The CSS outline property is also included in box model, but it doesn't take up any space.
+                            </li>
+                        </ul>
+                    </li>
+            
+                    <li>
+                        <p class="concept">How to change the box model the browser uses</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use box-sizing property like width, height, float, padding, and border.
+                                </p>
+                                <p class="answer">
+                                    There are two more box-sizing property
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                content-box: The width and height values are assigned to the content box only, and padding and border are added afterward. This is
+                                                the default.
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <p class="answer">
+                                                border-box: Any defined padding and border are included inside the assigned width and height values. This used to be called “quirks
+                                                mode.”
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to position your elements</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I need to use the CSS position property to place my content. Here are some values:
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                relative: The element is positioned relative to its current position in the document flow.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                absolute: The element is positioned based on its container element.
+                                                This property can cause element overlap, 
+                                                but z-index property can help me determine which element should be overlap other.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                fixed: The element is positioned relative to the browser window.
+                                            </p> 
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                static: The element is placed as it appears in the normal flow. This is the default.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                sticky: causes the element to toggle between relative and fixed, depending on the scroll position.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="answer">
+                                    After specify type of position of an element, I should set position for them. 
+                                    I can use the CSS left, right, top, and bottom property.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to control the way elements stack up</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the CSS property z-index to control stack up.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    z-index: enables you to set the order of elements with respect to how they stack on top of each other.
+                                    The highest value that I assgin to z-index for an element, so that element will be prioritized others.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to manage the flow of text</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use the CSS property float, clear, and overflow to manage the flow of text.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="answer">
+                                    overflow: handles overflow text, which is text that doesn’t fit within its rectangular area;
+                                    Here are some values:
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                visible: display rest of the content outside of the box when rest of the content doesn’t fit in the box. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                hidden: hidde the rest of the content that doesn’t fit the box.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                scroll/auto: make the box is scrollable.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I have a full understanding of the box model and learn how to change the size of a box.
+                    If I set a width and height of 100px for a box, its width, and height currently are 100px.
+                    When I set the margin of the box to be 10px, the width and the height should be 120px
+                    because width + left margin + right margin = 100px + 10px + 10px = 120px.
+                    This is the same idea when I apply padding and border.
+                    After setting the layout, I should figure out the position of my elements. I have static, fixed, relative, absolute, and
+                    sticky types of positions.
+                    Every element is static by default. The fixed and sticky positions stay in the same position while scrolling the
+                    browser.
+                </p>
+            
+                <p>
+                    The most useful position types are relative and absolute position types.
+                    When I set an element to be relative, it can change its position relative to its current position and does not affect
+                    other elements.
+                    When I set an element to be absolute, it flows out of screen control but its position is relative to its nearest
+                    container.
+                    I should be aware of the downside of absolute which is the element overlap issue, but I could use z-index to easily fix
+                    this problem.
+                    If I need to control text overflow in a box, I need to use the overflow property.
+                </p>
+            </div>
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 11 Using CSS to Do More with Lists, Text, and Navigation</h3>
+                </header>
+            
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>
+                        <p class="concept">How the CSS box model affects lists</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can use box-sizing property to affect margin, padding, color, and background-color of lists.
+                                </p>
+                                <p class="answer">
+                                    I could even specify styles of lists like:
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                list-style-image: for placement of an image as a list-item marker
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                list-style-position: indicating where to place the list-item marker
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                list-style-type: the type of list-item marker itself
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+            
+                    </li>
+            
+                    <li>
+                        <p class="concept">How to customize the list item indicator</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I can customize the list item indicator by the CSS list-style-position property.
+                                    The values are:
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                inside: put the list item indicator inside the box with the items.
+                                            </p>
+                                            
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                outside: put the list item indicator outside of the box from the items.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to use list items and CSS to create an image map</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    Creata a div put a list into that div.
+                                    In a ul tag, I need to have a li tag. 
+                                    Then, I add anchor inside the li tag to define source of that area in the map.
+                                    After that, I specify area of that src and use background property to show background image of that area 
+                                    in the style sheet.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How navigation lists differ from regular lists</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    The user’s mouse cursor will change to indicate that the element is clickable.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="answer">
+                                    The area around the element changes appearance when the mouse hovers over it.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="answer">
+                                    The content area is visually set apart from regular text.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to create vertical navigation with CSS</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    A nav tag means include a navigation. 
+                                    To create a vertical navigation, I can simply just create a list because vertical list is the default format.
+                                    However, I can use the CSS property margin, width, and float to position my list 
+                                    and add more features on them by link, hover, visited, and active.
+                                </p>
+                                <p class="answer">
+                                    When I create a list in another list and want to style them, I should do:
+                                    <ul>
+                                        <li>
+                                            <p class="answer">
+                                                Use nav ul and nav ul li for the first level of lists
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="answer">
+                                                Use nav ul ul and nav ul ul li for the second level of lists.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="concept">How to create horizontal navigation with CSS</p>
+                        <ul>
+                            <li>
+                                <p class="answer">
+                                    I need to change the display property of ul and li to be inline to create a horizontal navigation.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned more about how to style my list and use a nav tag to navigate on my page.
+                    I can use a box model to affect my lists such as margin, border, padding, width, float, background-color, and color.
+                    If I want to customize my list item indicator, I need to use the list-style-image and the list-style-type.
+                    When I want to change the position of the list item indicator inside the box, I can use list-style-position.
+                </p>
+            
+                <p>
+                    Furthermore, I can use the list to create an image map. I need to add an anchor tag in a li tag and specify its URL and
+                    size.
+                    Navigation lists differ from the regular list because I have more features than a regular list.
+                    For example, when users hover over the link, the text is changed to be larger and have a different color.
+                    The vertical navigation list is defaulted by HTML, but the horizontal navigation list is not.
+                    I need to set the display of the ul and the li to be inline.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <footer>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- <script scr="script.js" defer></script> -->
+</body>
+
+</html>

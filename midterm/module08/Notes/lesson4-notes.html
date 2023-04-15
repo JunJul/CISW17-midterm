@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 Notes</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        p.answer {
+            padding-left: 1em;
+        }
+
+        p.content-topic {
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 3em;
+        }
+
+        /* main section */
+        section.mainSection {
+            background-color: #E8A87C;
+            margin: 10px 200px;
+        }
+
+        section.title {
+            text-align: center;
+        }
+
+        header.chapter-header {
+            /* text-align: center; */
+            color: blue;
+        }
+    </style>
+
+    <!--
+                    Junze He
+                    Spring 2023 CISW 17 
+                    03/24/2023
+        -->
+</head>
+
+<body>
+    <section class="title">
+        <header>
+            <h1>Lesson 4 Notes</h1>
+        </header>
+    </section>
+
+    <section class="mainSection">
+
+        <div class="container">
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Ch6: Working with Fonts, Text Blocks, Lists, and Tables</h3>
+                </header>
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+                <ul>
+                    <li>
+                        <p>How to use boldface, italic, and special text formatting</p>
+
+                        <p class="answer">The &lt strong &gt &lt /strong &gt tag is to bold texts.</p>
+                        <p class="answer">The &lt em &gt &lt /em &gt tag is to italize texts.</p>
+                        <p class="answer">The &lt sup &gt &lt /sup &gt tag is to Superscript text.</p>
+                        <p class="answer">The &lt sub &gt &lt /sub &gt tag is to Subscript text.</p>
+                        <p class="answer">The &lt pre &gt &lt /pre &gt tag is to Monospaced text, preserving spaces and line breaks.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to tweak the font</p>
+                        <p class="answer">The &lt font &gt &lt /font &gt tag allows us to tweak texts. 
+                            For example, add size and color properties in the opening font tag.</p>
+                        <p class="answer">Using inline or external css to tweak fonts with font-family, font-size, and color properties.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to use special characters</p>
+                        <p class="answer">Special characters are specified as either <strong>numeric codes</strong> or code names.</p>
+                        <p class="answer">When using special characters, type their nummeric codes or code names.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to align text on a page</p>
+                        <p class="answer">p tag and div tag provide mobility of aligning text on a page.</p>
+                        <p class="answer">Using a style attribute called <strong>text-aligin</strong> to aligin text. 
+                            We can style the aliginment by inline, internal and external css for any block element.</p>
+
+                    </li>
+                
+                    <li>
+                        <p>How to use the three types of HTML lists</p>
+                        <p class="answer">Ordered list: a <strong>ol tag </strong> has an indented list that has numbers or letters before each list item.</p>
+                        <p class="answer">Unordered list: a <strong>ul tag</strong>  has an indented list that has a bullet or another symbol before each list item.</p>
+                        <p class="answer">Definition list: a <strong>dl tag</strong>  has a list of terms and their meanings without numbers and letters before each item.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to nest lists within lists</p>
+                        <p class="answer">Nested list means a list is placed in another list. Simply say, a ul tag is placed 
+                            in a li tag of another ul tag.</p>
+                        <p class="answer">We can also can create a nested list with combo of ordered and unordered list.</p>
+                        <p class="answer">We can use style <strong>list-style-type</strong> to choose a bullet type.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to create simple tables</p>
+                        <p class="answer">A <strong>table tag</strong> is to create a table.</p>
+                        <p class="answer">A <strong>tr tag</strong> is to create a row in a table and a <strong>td tag</strong> is to create a column in a row.</p>
+                        <p class="answer">A <strong>th tag</strong> represents header or title of each column.</p>
+                        <p class="answer">A <strong>thead tag</strong>  warps your header row, a <strong>tfoot tag</strong> shows result of a colmun, 
+                            and a <strong>tbody tag</strong> warps rows and columns.</p>
+
+                    </li>
+                
+                    <li>
+                        <p>How to control the size of tables</p>
+                        <p class="answer">We can control the size of a table by adding style <strong>width property </strong> 
+                            like 50% or 25% for each row and column.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to align content and span rows and columns within tables</p>
+                        <p class="answer">We can align the contents of table cells both horizontally and vertically 
+                            with the <strong>text-align and vertical-align style properties</strong>.</p>
+                        <p class="answer">We can use <strong>colspand and rowspan attribute</strong> to expand or span rows and columns withn in a table.</p>
+                    </li>
+                
+                    <li>
+                        <p>How to use CSS columns</p>
+                        <p class="answer">If you have a lot of infomation to present, use CSS columns 
+                            and it is better to use internal or external CSS.</p>
+                        <p class="answer">Use <strong>column-count propert</strong> y to specify how many columns we need 
+                            and <strong>column-gap</strong> property to define space between each column.</p>
+                        <p class="answer">Use colspan attribute for the footer.</p>
+                    </li>
+                </ul>
+                
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    If I want to bold and italicize texts, I need to use strong and em tags instead of b and i tag.
+                    The reason is that the strong and the em tags are to emphasize texts and let the browser know
+                    they have special meanings. I can use special characters on a page by using numeric codes and code names.
+                    Easier, I can copy a special character from somewhere and paste it into my paragraphs.
+                    The pre, sup, and sub tags are to add style to a text to be a special character,
+                    and I can align text by using text-align.
+                </p>
+                <p>
+                    When I want to have a list on my page, I can use list tags. We have three types of lists, ordered, unordered, and
+                    definition list.
+                    The ordered list is structured as a list by letters and numbers, the unordered list is structured list by bullet points,
+                    and the definition list is structured as a list by header and item.
+                    I can also create a simple table with a table tag. In a table, I can create rows and columns by tr and td tags.
+                    If I have a lot of information that needs to display, I should use the CSS column property to divide my content in each
+                    column.
+                </p>
+            </div>
+
+
+            <div>
+                <header class="chapter-header">
+                    <h3>Lesson 7: Using External and Internal Links</h3>
+                </header>
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+
+                <ul>
+                    <li>
+                        <p>How to use anchor links</p>
+
+                        <p class="answer">The anchor tag &lt a href="" &gt &lt /a &gt is a way to link to web page. We can add images or 
+                            texts between the anchor tag, so users can click texts or images to enter another page.
+                        </p>
+                        <p class="answer">href is an attribute of the anchor tag and identifies the address of the page or document 
+                            to which you are linking.
+                        </p>
+
+                        <p class="answer"> The anchor can also identify location within a page. 
+                            I can add id in other tags and use the anchor tag to link it by href="#XXX"</p>
+                    </li>
+
+                    <li>
+                        <p>How to link between pages on your own site</p>
+
+                        <p class="answer">The first link is an absolute link. With an absolute link, there is absolutely no doubt 
+                            where the link should go because the full URL is provided—domain name included. 
+                            http://www.yourdomain.com/zoo.html
+                        </p>
+                        <p class="answer">The second link is a relative-root link. It is relative to the domain you are currently browsing.
+                            /zoo.html
+                        </p>
+                        <p class="answer">
+                            In the third link, the double dot (..) is a special command that indicates the folder that contains the current
+                            folder—in other words, the parent folder. Anytime you see the double dot, just think to yourself, “Go up a level in the
+                            directory structure.” ../zoo.html
+                        </p>
+
+                        <p class="answer">In the same folder, I can create two sites and use an anchor tag to link the first page to the second page.
+                            Then, I can use another anchor tag in the second page to link the second page to the first page. As a result, I should use 
+                            relative-root and current folder links.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>How to link to external content</p>
+                        <p class="answer">If I need to link an external content, I need to provide the anchor tag with an absolute link, 
+                            which means an external content is not in the root. It is from outside, so it needs the full URL.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>How to link to non-Web documents such as PDF and Word documents</p>
+                        <p class="answer">Simply, I can replace URL in the anchor tag with location of a document.</p>
+                        <p class="answer">If I add download attribute in the anchor tag, it forces a browser to open download dialog.</p>
+                    </li>
+
+                    <li>
+                        <p>How to link to an email address</p>
+                        <p class="answer">I can replcae UPR in the anchor tag with <strong>mailto:yourusername@yourdomain.com</strong></p>
+                        <p class="answer">If I want to add title and body of a message, I can do <strong>mailto:author@somedomain.com?subject=Book Question&body=
+                        When is the next edition coming out?</strong></p>
+                    </li>
+
+                    <li>
+                        <p>How to use window targeting with your links</p>
+                        <p class="answer">The window targeting is a pop-up window. When I target a window, it pops up a new window.</p>
+                        <p class="answer">It is structured by &lt a href="" target="_blank" &gt &lt /a &gt</p>
+                        <p class="answer">I need to avoid using &lt a href="" target="newWindow" &gt &lt /a &gt</p>
+                    </li>
+                    
+                    <li>
+                        <p>How to style your links with CSS</p>
+                        <p class="answer">
+                            I need to use pseudo-classes that describes styles for elements that apply to certain circumstances,
+                            such as various states of user interaction with that element 
+                        </p>
+                        <p class="answer">a:link: Describes the style of a hyperlink that has not been visited previously.</p>
+                        <p class="answer">a:visited—Describes the style of a hyperlink that has been visited previously and is present in the 
+                            browser’s memory.
+                        </p>
+                        <p class="answer">a:hover—Describes the style of a hyperlink as a user’s mouse hovers over it (and before it has been clicked).</p>
+                        <p class="answer">a:focus—Describes the style of a hyperlink as the user activates the link. This is often used on devices where there is
+                        no mouse, so clicking is not possible.
+                        </p>
+                        <p class="answer">a:active—Describes the style of a hyperlink that is in the act of being clicked but has not yet been released.</p>
+                    </li>
+                    
+                    <li>
+                        <p>How to add descriptions to links</p>
+                        <p class="answer">I can add a footerlink to derscribe links that I have on my on page, 
+                            so my users can enter into the footer page to see what pages are linked.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>Best practices for web page links</p>
+                        <p class="answer">The best practices for web page links are make your links stand out,
+                            For links use only link styles, Style visited links, Use descriptive content for link text, 
+                            Add padding to text links, Link images, Use icons to aid in comprehension, Avoid tiny links.
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned the anchor tag links multiple pages, so users can enter another page by clicking a link on a
+                    page.
+                    Inside the anchor tag, the major attribute is href. href is an attribute to identify where users will enter and what
+                    happens to users.
+                    If I want them to enter my another page, I will type such as href="myAnotherPage.html".
+                    This is a relative-root link that stays in the same directory as the current page.
+                    If I want them to an external page, I will type the full URL of that external page.
+                </p>
+                <p>
+                    The anchor tag can also open a document and force users' web browsers to open a donwalod dialog.
+                    I only need to add another attribute download in the anchor tag. Moreover, I want to style my links only by
+                    pseudo-classes.
+                    When a link is not visited, it has some styles. When a link is visited, its style is changed. I have hovered, visited,
+                    linked, focused, and been active.
+                    Each of them can style my link differently and make my links stand out in users' eyes.
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <header class="chapter-header">
+                <h3>Lesson 8: Working with Colors, Images, and Multimedia</h3>
+            </header>
+        
+            <p class="content-topic">What You'll Learn in This Lesson</p>
+        
+            <ul>
+                <li>
+                    <p>How to choose colors for your website that work on the web</p>
+                    <p class="answer">I should use a natural palette of colors, use accessible color combinations, use colors with good contrast, 
+                        especially for blocks of text, use a small color palette, consider my demographics.
+                    </p>
+
+                    <p class="answer">
+                        I should consider color schemes in web desgin such as analogous, complementary, monochromatic, triadic.
+                    </p>
+                </li>
+        
+                <li>
+                    <p>How to use CSS to set background, text, and border colors</p>
+                    <p class="answer">I can put style="background-color:blue;" inside the body tag or in the style sheet rule for 
+                        the body element.
+                    </p>
+
+                    <p class="answer">
+                        I can set text color by color attribute and set broder color by border attribute. 
+                        For example color: red and border: border-width border-type border-color.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to select a graphics software package to use</p>
+                    <p class="answer">
+                        You can use almost any graphics program to create and edit images for your website, from the simple painting or drawing
+                        program that typically comes free with your computer’s operating system, to an expensive professional program such as
+                        Adobe Photoshop.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to prepare photographs for use online</p>
+                    <p class="answer">
+                       I need to have skills to create an image that has a huge visual impact, but small file sizes.
+                    </p>
+                    <p class="answer">
+                        To put photos on your web pages, you need to convert your print-based photos to digital images or create photos
+                        digitally by using a digital camera, such as the camera in your smartphone.
+                    </p>
+
+                    <p class="answer">You should never resize an image to be larger than what you started with.</p>
+                    <p class="answer">For most responsive designs, your images don’t need to be more than 2000 pixels wide.</p>
+                </li>
+
+                <li>
+                    <p>How to create banners and buttons</p>
+                    <p class="answer">
+                        To create a new image in GIMP, go to File and choose New. The Create a New Image dialog box displays.
+                        If you aren’t sure how big the image needs to be, just accept the default size of 640 × 480. Or you can choose one of
+                        the other predetermined sizes in the Template drop-down, such as Web Banner Common 468 × 60 or Web Banner Huge 728 × 90.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to reduce the number of colors in an image</p>
+                    <p class="answer">
+                        When you save or export an image as a GIF, you might be prompted to flatten layers or reduce the number of colors by
+                        converting to an indexed image because those are requirements for GIFs.
+                    </p>
+
+                    <p class="answer">
+                        I should use PNG. The PNG format takes things a step further, enabling you to specify varying degrees of transparency.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to create transparent images</p>
+                    <p class="answer">
+                        I should use PNG. The PNG format takes things a step further, enabling you to specify varying degrees of
+                        transparency.
+                    </p>
+
+                    <p class="answer">
+                        he process of creating a transparent image depends on the type of image you are creating (GIF or PNG) and the graphics
+                        software you are using to create it.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to prepare an image for a tiled background</p>
+                    <p class="answer">
+                        ask yourself what that tiled background adds to the overall look and feel of your website. More importantly, ask
+                        yourself whether the text of the site can be read easily when placed over that pattern.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to create animated web graphics</p>
+                    <p class="answer">
+                        I can use CSS animation to create animated web graphics, so I can use like animation-display, 
+                        animation-direction, animation-duration and so on
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to place an image on a web page</p>
+                    <p class="answer">
+                        I should move imgae into my folder with my HTML files that need to display that image. Then, I use img tag to dispplay the image.
+                        <br>For example &lt img src="addressOfTheImage" &gt &lt /img  &gt.
+                    </p>
+
+                    <p class="answer">
+                        Turing an image into a link: &lt a href="http://www.flickr.com/photos/nofancyname/614287355/"> 
+                        &lt img src="tunnelview_sm.jpg" alt="Tunnel View" style="width:100px; height:80px;"> &lt /a>
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to describe images with text</p>
+                    <p class="answer">
+                        If I want to add text to descibe my images, I should add alt attribute into my img tag like alt="My Image".
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to specify image height and width</p>
+                    <p class="answer">
+                        I can specify image height and width by two CSS properties which are height and width such as height: 200px; width: 100px;
+                    </p>
+
+                    <p class="answer">
+                        The best way to adjust the dimensions of your images is to set width to a percentage of the container and height to auto
+                        For example, style="width:100%; height:auto;"
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to align images</p>
+                    <p class="answer">
+                        I can horizontally align images by CSS float property.
+                    </p>
+                    <p class="answer">
+                        float: left; aligns the first image to the left and wraps text around the right side of it.
+                    </p>
+                    <p class="answer">
+                        float: left; aligns the first image to the left and wraps text around the right side of it.
+                    </p>
+
+                    <p class="answer">
+                        I can vertically align images by CSS vertical-align property.
+                    </p>
+
+                    <p class="answer">
+                        vertical-align:text-top; To line up the top of an image with the top of the tallest image or letter on the same
+                        line.
+                    </p>
+
+                    <p class="answer">
+                        vertical-align:text-bottom; To line up the bottom of an image with the bottom of the text
+                    </p>
+
+                    <p class="answer">
+                        vertical-align:middle; To line up the middle of an image with the overall vertical center of everything on the line
+                    </p>
+
+                    <p class="answer">
+                        vertical-align:baseline; To line up the bottom of an image with the baseline of the text.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to use background images</p>
+                    <p class="answer">
+                        I should use the CSS background property.
+                        backgrround: background-color background-image background-repeat background-position
+                    </p>
+
+                    <p class="answer">
+                        background-image: url('imagename.gif')
+                    </p>
+
+                    <p class="answer">
+                        background-repeat: Specifies how the image should repeat, both horizontally and vertically. 
+                        Other options are repeat (same as default), repeat-x (horizontal), repeat-y (vertical), and no-repeat (only one
+                        appearance of the graphic).
+                    </p>
+
+                    <p class="answer">
+                        background-position: specifies where the image should be initially placed, relative to its container. Options include
+                        top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right, and
+                        specific pixel and percentage placements.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to use image maps</p>
+                    <p class="answer">
+                        Image maps is used to show images as navigation.
+                        To create any type of image map, you need to figure out the numeric pixel coordinates of each region within the image
+                        that you want to turn into a clickable link. These clickable links are also known as areas.
+                    </p>
+                    <p class="answer">
+                        I should use the map tag with specified a name like &lt map name="mapname" &gt. 
+                        Then, I should use area tag for each region of the image. I can set attributes shape to indicate the shape of the regoin
+                        and I can set coords to indicate exact pixel coordinates for the region. For rectangles, give the x,y coordinates of the upper-left corner followed by the x,y coordinates of the lower-right
+                        corner. For circles, give the x,y center point followed by the radius in pixels. For polygons, list the x,y coordinates
+                        of all the corners in a connect-the-dots order.
+                    </p>
+
+                    <p class="answer">
+                        hre: Specifies the location to which the region links. You can use any address or filename that you would use in an
+                        ordinary <a> link tag.
+                    </p>
+                    <p class="answer">
+                        alt: Enables you to provide a piece of text that describes the shape; as you learned previously, providing this text is
+                        important to users browsing with text-only browsers or screen readers.
+                    </p>
+                    <p class="answer">
+                        title: Ensures that tool tips containing the information are also visible when the user accesses the designated area.
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to link to or embed multimedia files</p>
+                    <p class="answer">
+                        The way link to a multimedia file is simliar to insert an image.
+                        &lt a href="chickadee.mov" &gt View a cute chickadee! &lt a &gt
+                    </p>
+                </li>
+
+                <li>
+                    <p>How to use HTML5 audio and video elements</p>
+                    <p class="answer">
+                        I should use video and aduio tags to embed the videos and audios on my browser. 
+                        When I use them, I need to use the attribute src="" to define my source.
+                        If I add a paragraph before a closing tag of the video, it is similar to alt in an img tag.
+                    </p>
+                    <p class="answer">
+                        Inside a video tag, we have different attributes, they are control, prload, loop, poster, and autoplay.
+                    </p>
+                    <p class="answer">
+                        controls: tells the browser to display the video with play/pause control buttons
+                    </p>
+                    <p class="answer">
+                        preload: Has three possible values: none, auto, and metadata. Use none if you do not want to buffer the file, use auto to
+                        buffer the file, and use metadata if you want to buffer only the metadata for the file.
+                    </p>
+                    <p class="answer">
+                        loop: Tells the browser to start the video from the beginning when it gets to the end.
+                    </p>
+                    <p class="answer">
+                        poster: Points to an image file that is shown when the video isn’t available, such as when it is still downloading.
+                    </p>
+                    <p class="answer">
+                        autoplay: Causes the video to start playing as soon as it is ready.
+                    </p>
+                </li>
+            </ul>
+        
+            <!-- Two paragraph summary -->
+            <p class="content-topic">Summary</p>
+            <p>
+                In this lesson, I understand that color choice is an important decision that I have to make when I create a site.
+                A nice color can help me to capture my users' attention on the main content that I want to share with them.
+                This turns out I should use the CSS background property to define the color of my site.
+                If I want to set a border around my content, I should use border property to set my border color and border styles.
+                Moreover, I learned how to images on my site by using the anchor tag and I can specify their height and width.
+            </p>
+        
+            <p>
+                When I insert images on my site, I have to make sure their file types.
+                The best choice is .png because .png could allow me to change transparency and make more changes further than othertypes.
+                I should keep the file size of images on my site as small as possible because loading speed is a major issue.
+                The most interesting part of this lesson is the audio and video tag.
+                These two tags can help me make a more attractive site and make a little inertaction between users and my site without
+                JS.
+            </p>
+    </section>
+
+
+    <section>
+        <footer>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- <script scr="script.js" defer></script> -->
+</body>
+
+</html>

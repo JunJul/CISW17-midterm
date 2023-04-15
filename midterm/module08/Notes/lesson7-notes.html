@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Responsive Web Design Notes"</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            font-size: 18px;
+            line-height: 1.5em;
+            max-width: 85%;
+            margin: auto;
+            background-color: #f3f3f3;
+            color: slate;
+            font-family: Helvetica, sans-serif;
+        }
+
+        h1, h2{
+            font-weight: 400;
+        }
+
+        ul {
+            padding-left: 3em;
+        }
+
+        li{
+            list-style-position: inside;
+        }
+
+        hr{
+            border-top: 1px dotted orange;
+            border-width: 20px;
+        }
+
+        p.answer {
+            padding-left: 1em;
+        }
+
+        p.content-topic {
+            font-weight: bold;
+        }
+
+        p.concept {
+            font-weight: bold;
+        }
+
+        /* title */
+        section.title {
+            text-align: center;
+        }
+
+        /* meida queries */
+        @media screen and (min-width: 750px){
+            h1{
+                font-size: 1.5em;
+            }
+
+            h2{
+                font-size: 1.25em;
+            }
+        }
+
+        @media screen and (max-width: 749px){
+            body{
+                line-height: 1.2em;
+            }
+
+            h1{
+                font-size: 1.25em;
+            }
+
+            h2{
+                font-size: 1.1em;
+            }
+        }
+    </style>
+
+    <!--
+                    Junze He
+                    Spring 2023 CISW 17 
+                    04/08/2023
+        -->
+</head>
+
+<body>
+    <section class="title">
+        <header>
+            <h1>Responsive Web Design Notes</h1>
+        </header>
+    </section>
+
+    <section class="mainSection">
+        <section>
+             <div>
+                <h2>Lesson 16: Understanding the Importance of Responsive Web Design</h2>
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+
+                <ul>
+                    <li>What is responsive web design (RWD)
+                        <ul>
+                            <li>
+                                Responsive web design (RWD) is an approach to web design that considers the customer’s device and adapts the design for
+                                optimal viewing. RWD helps web designers and site owners by creating an “edit once, display anywhere” website.
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li>Why we need RWD
+                        <ul>
+                            <li>
+                                Responsive web design is a combination of many design techniques, including the following: CSS—especially media queries
+                                Clean, valid HTML code, Progressive enhancement, Feature, device, and browser detection using scripts
+                                , Server-side components to produce faster sites. These techquies can help us to build a better web for users.
+                            </li>
+                            <li>
+                                Responsive web design attempts to respond to the device viewing the page and provide the best experience for that device
+                                as possible.
+                            </li>
+                            <li>
+                                Responsive design is important to mobile customers because it allows them to see the same website as nonmobile
+                                customers.
+                            </li>
+                            <li>
+                                RWD allows designers to create sites that work in different devices without having to repost the content multiple times.
+                            </li>
+                            <li>
+                                RWD lets a designer build a website that doesn’t care what device the customer is using. 
+                                In addition, RWD is more future-proof than standard web design. RWD doesn’t look at the device but rather looks at the
+                                features.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>What is progressive enhancement
+                        <ul>
+                            <li>
+                                Progressive enhancement is the process of creating a strong foundation on a website and then 
+                                adding enhancements to that foundation as browsers and devices can handle them.
+                            </li>
+
+                            <li>
+                                When you’re concerned with building a site with progressive enhancement, your first concern is with 
+                                the content—what the content is, how it will be manipulated on the site, and where the site will get it.
+                            </li>
+
+                            <li>
+                                A webiste has three layers: the content stored in the HTML, the presentation defined by CSS, 
+                                and the behavior written in scripts like JavaScript.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to write HTML that’s RWD ready
+                        <ul>
+                            <li>
+                                Responsive design doesn’t add any new HTML tags or attributes, which makes it easy to learn. You simply write your HTML
+                                so that it is well formed, valid, and semantic, as previously mentioned. You should start with HTML5, 
+                                the most recent version of HTML, which provides the most assistance to web designers who
+                                want to use progressive enhancement and RWD. While you can build RWD sites using other versions of HTML, it’s best to
+                                stay as up to date as possible.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned theoretical knowledge about responsive web design.
+                    This is a fun lesson because I can design a flexible web page that my users can visit with any device.
+                    If my users want to visit my web pages with their computers, my web pages can fit their computers' screens perfectly.
+                    If my users want to visit my web pages with their phones, my web pages can fit their phones' screens as well.
+                </p>
+
+                <p>
+                    Progressive enhancement is an excellent idea to enhance my web pages.
+                    I can switch my focus away from what browsers and devices my user uses, so I only need to focus on my content.
+                    When I switch my mindset to progressive enchantment, I need to separate content from presentation and functionality.
+                    The result is that a website has three layers, the content stored in the HTML,
+                    the presentation defined by CSS, and the behavior written in scripts like JavaSceipt.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>
+                <h2>Lesson 17: Designing for Mobile Devices</h2>
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+            
+                <ul>
+                    <li>How mobile design differs from standard web design
+                        <ul>
+                            <li>
+                                The moblie desgin differs from standard web desgin because it requires to avoid using fixed-width desgins, 
+                                make sure elements fitting in the desgin, keep font sizes legible, and make links tappable.
+                            </li>
+                        </ul>
+            
+                    </li>
+            
+                    <li>What the Mobile First design philosophy is
+                        <ul>
+                            <li>
+                                The first thing to do with Mobile First is to create the default design for all your pages for mobile devices. Think
+                                about the smallest screen that might be used to view your pages.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How Mobile First is important to RWD
+                        <ul>
+                            <li>
+                                Mobile First is primarily an implementation of progressive enhancement. You focus on getting the required content and
+                                functionality to as many customers as possible and then enhance the site for more diverse devices.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to build responsive tables and images for mobile devices
+                        <ul>
+                            <li>
+                                If I want to build responsive tables, I need to resize the cells, rearrange the table, and remove or hide content.
+                                The most improtnat things are to set the table width to be 100% and border to be 1
+                            </li>
+                            <li>
+                                If I want to build responsive images, I need to use the images as I always would, 
+                                set the image width to something flexible, 
+                                and change what images are displayed depending device properties.
+                            </li>
+                            <li>
+                                Using Flexible width images: img { width: 100%; max-width: 100%; height: auto; }
+                            </li>
+                            <li>
+                                Changing the Images Displayed with srcset: &ltimg srcset="images/myImage.jpg 1x, images/myImage-2x.jpg 2x, 
+                                images/myImage-3x.jpg 3x" src="images/myImage.jpg" alt="My Image"&gt. I can also replace the pixels with width like 200w.
+                            </li>
+                            <li>
+                                Changing the Images Displayed with size: sizes="(max-width: 40em) 100vw, 50vw"
+                            </li>
+                            <li>
+                                I can also Change Images by Using the &ltpicture>&gt Element. Each &ltsource&gt has a media query built into it in the media attribute that tells the browser when to use those defined images.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to use CSS columns to create responsive designs without media queries
+                        <ul>
+                            <li>
+                                I can use the CSS column property that I can a column layout that will adjust depending upon the width of the browser.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned basic mobile web design and understand what things I should avoid and do when designing a
+                    mobile web page.
+                    I should avoid using fixed-width designs because users expect the pages to be flexible to adapt their any device.
+                    Also, I need to make sure my elements are fitting on their devices' screens, so my elements do not render out of their
+                    screens.
+                    I should keep my font size at least 16px because the screen size on a mobile phone is small and the size should be
+                    relative to their screen size.
+                    The mobile-first idea is to focus on the content, so I need to consider placing and displaying my content on my users'
+                    screens.
+                </p>
+            
+                <p>
+                    I can use responsive tables and images to create a flexible web page.
+                    To make tables responsive, I resize the cells, rearrange the table, and remove or hide content.
+                    To make images responsive, I use the images as I always would, set the image width to something flexible,
+                    and change what images are displayed depending on device properties.
+                    Moreover, if I want to create a responsive design without media queries, the CSS column property is a good choice.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>
+                <h2>Lesson 18 Using Media Queries and Breakpoints</h2>
+
+                <p class="content-topic">What You'll Learn in This Lesson</p>
+                <ul>
+                    <li>How to write a CSS media query
+                        <ul>
+                            <li>
+                                When you are building a media query, you use the @media rule. You then define the media types the rule applies to, as
+                                well as the features of that type that you want to focus on.
+                                @media mediaType and (mediaFeature) { }
+                            </li>
+                        </ul>
+        
+                    </li>
+        
+                    <li>How to use different media types
+                        <ul>
+                            <li>
+                                I can set the media type in any style sheet link with the media attribute. But most designers leave it off because the
+                                default is all. &ltlink href="print.css" rel="stylesheet" media="print"&gt
+                            </li>
+                            <li>
+                                Include the media type in the @import command to define media queries when a style sheet is imported. @import url("url") type;
+                            </li>
+                            <li>
+                                Include media-specific styles directly in another style sheet to limit the scope of the enclosed styles. @media type { … }
+                            </li>
+                            <li>
+                                Using media features: @media (min-width: 320px) { ... }
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to create media query expressions
+                        <ul>
+                            <li>
+                                Media query expressions use logical operators to define complex scenarios.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Understanding logical keywords in your queries
+                        <ul>
+                            <li>
+                                and—This combines features and types together.
+                                @media (min-width: 760px) and (orientation: landscape) { ... }
+                            </li>
+                            
+                            <li>
+                                Comma-separated list—This is equivalent to the OR logical operator.
+                                @media (min-width: 760px), (orientation: landscape) { ... }
+                            </li>
+                            
+                            <li>
+                                not—This negates the entire query. @media not (min-width: 760px) and (orientation: landscape) { ... }
+                            </li>
+                            
+                            <li>
+                                only—This prevents browsers that don’t support media queries from applying the styles. @media only screen { ... }
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>What CSS breakpoints are
+                        <ul>
+                            <li>
+                                A CSS breakpoint is a device feature with a media query declaration assigned to it. 
+                                They are most commonly based on browser widths, so most designers think of breakpoints 
+                                as places where the width of the design changes to accommodate different devices.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to define breakpoints
+                        <ul>
+                            <li>
+                                Defining breakpoints is done with CSS media queries. The most common type of breakpoint is based on the width of the
+                                device. 
+                            </li>
+                            <li>
+                                I can use two different media queries to define two different changes based on the width of the device.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>How to find the best breakpoints for your website
+                        <ul>
+                            <li>
+                                1. Choose breakpoints for the design, not the device
+                                2. Keep breakpoints 1px different
+                                3. Consider device orientation, not just width
+                                4. Don’t forget Retina devices
+                            </li>
+
+                            <li>
+                                Media Queries for Retina Devices
+                                @media (-webkit-min-device-pixel-ratio: 2), /* Safari and iOS */
+                                (min-resolution: 192dpi) /* Others */ {
+                                
+                                }
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+        
+                <!-- Two paragraph summary -->
+                <p class="content-topic">Summary</p>
+                <p>
+                    In this lesson, I learned how to use media queries to define different styles for different devices.
+                    A responsive web design is not limited to the width of the web, but also the style of the web.
+                    Elements are displayed on different devices and they look different because different devices and browsers have
+                    different settings and resolutions.
+                    I can create media types in three ways, putting them into the style sheet link, importing them, and defining it in a
+                    style sheet.
+                </p>
+        
+                <p>
+                    When I use media queries, I can add media features.
+                    Media features let me look at the specific features of the media and style your pages accordingly.
+                    Moreover, I can use logical operators to define complex scenarios in media queries. The logical operators are and,
+                    commas, not, and only.
+                    To create breakpoints, I can define breakpoints is done with CSS media queries.
+                    I have to define device features, so the style of the web page can be switched between two different styles.
+                </p>
+            </div>
+        </section>
+
+           
+    </section>
+
+
+    <section>
+        <footer>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- <script scr="script.js" defer></script> -->
+</body>
+
+</html>

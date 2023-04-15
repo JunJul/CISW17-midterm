@@ -1,0 +1,86 @@
+body {
+    margin-top: 2em;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+hr{
+    border-top: 2px solid black;
+    width: 60%;
+    margin: 15px auto;
+    border-style: dashed;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+}
+
+/* Title Section */
+section.TitleSection{
+    background-color: bisque;
+    color: #34568B;
+    margin: 0 260px;
+}
+
+h1.MyName{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    display: inline-block;
+}
+
+img.Pokemon{
+    border-radius: 30%;
+    height: 10em;
+}
+
+/* Current Courses */
+section.CurrentCourses{
+    background-color: #cdd3dd;
+    margin: 0 260px;
+    
+}
+
+img.CourseImages{
+    border-radius: 50%;
+    height: 5em;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    text-shadow: #FC0 1px 0 10px;;
+}
+
+/* Turth */
+section.truth{
+    margin: 0 260px;
+}
+
+/* background-music */
+iframe.background-music{
+    position: absolute;
+    width: 20.5%;
+    right: 0em;
+}
+
+section.container{
+    position: relative;
+}
+
+/* My Favorite Food */
+Section.MyFavoriteFood{
+    margin: 0 260px;
+}
+
+table.FoodTable,tr,td,th{
+    margin: 0 auto;
+    border: 2px solid white;
+    background-color: #92A8D1;
+}
