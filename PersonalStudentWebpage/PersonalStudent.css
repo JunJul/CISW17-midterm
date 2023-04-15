@@ -1,5 +1,6 @@
 body {
-    margin-top: 2em;
+    width: 85%;
+    margin: 2em auto 0px auto;
     text-align: center;
 }
 
@@ -10,7 +11,7 @@ li{
 hr{
     border-top: 2px solid black;
     width: 60%;
-    margin: 15px auto;
+    margin: auto;
     border-style: dashed;
 }
 
@@ -21,9 +22,10 @@ p{
 
 /* Title Section */
 section.TitleSection{
+    width: 100%;
     background-color: bisque;
     color: #34568B;
-    margin: 0 260px;
+    margin: 0 auto;
 }
 
 h1.MyName{
@@ -33,6 +35,7 @@ h1.MyName{
 }
 
 img.Pokemon{
+    display: inline-block;
     border-radius: 30%;
     height: 10em;
 }
@@ -40,7 +43,7 @@ img.Pokemon{
 /* Current Courses */
 section.CurrentCourses{
     background-color: #cdd3dd;
-    margin: 0 260px;
+    margin: 0 auto;
     
 }
 
@@ -60,14 +63,13 @@ a:hover{
 
 /* Turth */
 section.truth{
-    margin: 0 260px;
+    margin: 0 auto;
 }
 
 /* background-music */
 iframe.background-music{
-    position: absolute;
-    width: 20.5%;
-    right: 0em;
+    display: inline-block;
+    float: left;
 }
 
 section.container{
@@ -76,11 +78,23 @@ section.container{
 
 /* My Favorite Food */
 Section.MyFavoriteFood{
-    margin: 0 260px;
+    margin: 0 auto;
 }
 
 table.FoodTable,tr,td,th{
     margin: 0 auto;
     border: 2px solid white;
     background-color: #92A8D1;
+}
+
+@media screen and (min-width:750px) {
+    body {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:749px) {
+    body {
+        font-size: 1.4em;
+    }
 }
